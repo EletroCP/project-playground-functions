@@ -21,9 +21,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+ let concat = name[name.length -1] + ', ' + name[0]
+ return concat
 }
+
 
 // Desafio 5
 function footballPoints() {

@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(v1, v2) {
-  if(v1 === true && v2 === true){
+  if (v1 === true && v2 === true) {
     return true
-  }else{
+  } else {
     return false
   }
 }
@@ -22,8 +22,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(name) {
- let concat = name[name.length -1] + ', ' + name[0]
- return concat
+  let concat = name[name.length - 1] + ', ' + name[0]
+  return concat
 }
 
 
@@ -36,10 +36,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let highest = -100
+  let compare = 0
+  for (index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > highest) {
+      highest = numbers[index] 
+    }
+  }
+  for (equal = 0; equal < numbers.length; equal += 1) {
+    if (numbers[equal] === highest) {
+      compare = compare + 1
+    }
+  }
+  return compare
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui

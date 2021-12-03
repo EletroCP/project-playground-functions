@@ -88,12 +88,53 @@ return result
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codeString) {
+  let codado = codeString.split("")
+   for(index = 0; index < codado.length; index +=1){
+     switch(codado[index]){
+       case "a":
+         codado[index] = "1";
+         break
+       case "e":
+         codado[index] = "2"
+         break
+       case "i":
+         codado[index] = "3"
+         break
+       case "o":
+         codado[index] = "4"
+         break
+       case "u":
+         codado[index] = "5"
+         break     
+      }
+   }
+    return codado.join("")
+    
 }
-function decode() {
-  // seu código aqui
-}
+function decode(dCode) {
+  let decodado = dCode.split("")
+  for(index = 0; index < decodado.length; index +=1){
+    switch(decodado[index]){
+      case "1":
+        decodado[index] = "a";
+        break
+      case "2":
+        decodado[index] = "e"
+        break
+      case "3":
+        decodado[index] = "i"
+        break
+      case "4":
+        decodado[index] = "o"
+        break
+      case "5":
+        decodado[index] = "u"
+        break     
+     }
+  }
+   return decodado.join("")
+   }
 
 module.exports = {
   calcArea,

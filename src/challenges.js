@@ -6,27 +6,22 @@ function compareTrue(v1, v2) {
     return false
   }
 }
-
 // Desafio 2
 function calcArea(base, height) {
   let resultado = 0;
   resultado = (base * height) / 2;
   return resultado
 }
-
 // Desafio 3
 function splitSentence(frase) {
   let splitString = frase.split(" ")
   return splitString
 }
-
 // Desafio 4
 function concatName(name) {
   let concat = name[name.length - 1] + ', ' + name[0]
   return concat
 }
-
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let pointWin = wins * 3
@@ -34,7 +29,6 @@ function footballPoints(wins, ties) {
   let points = pointWin + pointTies
   return points
 }
-
 // Desafio 6
 function highestCount(numbers) {
   let highest = -100
@@ -69,7 +63,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge"
   }
 }
-
 // Desafio 8
 function fizzBuzz(param) {
   let result = []
@@ -86,7 +79,6 @@ function fizzBuzz(param) {
 }
 return result
 }
-
 // Desafio 9
 function encode(codeString) {
   let codado = codeString.split("")
@@ -134,8 +126,7 @@ function decode(dCode) {
      }
   }
    return decodado.join("")
-   }
-
+}
 module.exports = {
   calcArea,
   catAndMouse,

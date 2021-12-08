@@ -22,9 +22,46 @@ function techList(tech, name) {
      }return array
    }
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(numbers) {
+  if(numbers.length !== 11){
+    return "Array com tamanho incorreto."
+  }
+  let comparador = 0
+  //verifica se existem repetidos
+  for (let index of numbers) {    
+    for (let check of numbers) {
+      if (index === check) {
+        comparador = comparador +1
+      }
+    }
+    if (comparador >= 3) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+    comparador = 0
+  }
+  for (let index of numbers) {
+    if(numbers[index] > 9 || numbers[index] < 0){
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+  let telefone = ''
+      for(let index = 0; index < numbers.length; index +=1){
+        if(index == 0){
+          telefone ="(" + numbers[index]
+        } else if (index == 1){
+          telefone = telefone + numbers[index] + ") "
+        } else if (index > 1 && index < 6){
+          telefone = telefone + numbers[index]
+        }else if(index == 7){
+          telefone = telefone + "-" + numbers[index]
+        }else{
+          telefone = telefone + numbers[index]
+        }
+      } return telefone
+  }
+
+
+ 
 
 // Desafio 12
 function triangleCheck() {

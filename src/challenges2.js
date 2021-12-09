@@ -74,8 +74,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(quantidade) {
+  //material para apoio: https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
+  //elimina o text
+  let numbers = quantidade.replace(/[^0-9]/g, '')
+  let valores = numbers.split("")
+  let soma = 0
+  for(let index = 0; index < valores.length; index+=1){
+    soma = soma + parseInt(valores[index])
+  }
+  if(soma === 1){
+    return soma + " copo de água"
+  } else {
+    return soma + " copos de água"
+  }
 }
 
 module.exports = {

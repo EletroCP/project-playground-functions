@@ -59,13 +59,18 @@ function generatePhoneNumber(numbers) {
         }
       } return telefone
   }
-
-
- 
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
+  if(lineA < (lineB + lineC) && Math.abs(lineC - lineB) < lineA){
+    return true
+  }  else if(lineB < (lineA + lineC) && Math.abs(lineC - lineA) < lineB){
+    return true
+  } else if(lineC < (lineB + lineA) && Math.abs(lineB - lineA) < lineC){
+    return true
+  }else {
+    return false
+  }
 }
 
 // Desafio 13

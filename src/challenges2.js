@@ -1,12 +1,12 @@
-// Desafio 10
+/* // Desafio 10
 function techList(tech, name) {
   let sortArray = []
   let array = []
   let list = {}
- 
+
   if(tech.length == 0){
     return "Vazio!"
-  
+
    } else {
      for(index = 0; index < tech.length; index +=1){
        sortArray.push(tech[index])
@@ -17,7 +17,7 @@ function techList(tech, name) {
         list.name = name
         array.push(list)
         list = {}
-        
+
       }
      }return array
    }
@@ -28,7 +28,7 @@ function generatePhoneNumber(numbers) {
   }
   let comparador = 0
   //verifica se existem repetidos
-  for (let index of numbers) {    
+  for (let index of numbers) {
     for (let check of numbers) {
       if (index === check) {
         comparador = comparador +1
@@ -61,7 +61,7 @@ function generatePhoneNumber(numbers) {
   }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  
+
   if(lineA < (lineB + lineC) && Math.abs(lineC - lineB) < lineA){
     return true
   }  else if(lineB < (lineA + lineC) && Math.abs(lineC - lineA) < lineB){
@@ -96,3 +96,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+ */

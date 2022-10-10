@@ -19,44 +19,63 @@ function techList(tech, name) {
   }
   return array;
 }
-/* // Desafio 11
+/* 
+// Desafio 11
+const checkNumber = (number) => {
+  const checkRepeted = number.reduce((accumulator, value) => (
+    { ...accumulator, [value]: (accumulator[value] || 0) + 1 }
+  ), {});
+
+  const objectToArray = Object.values(checkRepeted);
+  const final = objectToArray.some((element) => element >= 3);
+  return final;
+};
+
+const invalidPhoneNumber = (number) => {
+  for (let index of number) {
+    if (number[index] > 9 || number[index] < 0) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+};
+
+const createPhoneNumber2 = (telefone, numbers, index) => {
+  if (index >= 2 && index <= 6) {
+    telefone += numbers[index];
+  }
+  if (index === 7) {
+    telefone += `-${numbers[index]}`;
+  }
+  if (index > 7) {
+    telefone += numbers[index];
+  }
+  return telefone;
+};
+
+const createPhoneNumber = (numbers) => {
+  let telefone = '';
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (index === 0) {
+      telefone = `(${numbers[index]}`;
+    }
+    if (index === 1) {
+      telefone += `${numbers[index]}) `;
+    }
+    telefone = createPhoneNumber2(telefone, numbers, index);
+  }
+  return telefone;
+};
+
 function generatePhoneNumber(numbers) {
-  if(numbers.length !== 11){
-    return "Array com tamanho incorreto."
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  let comparador = 0
-  //verifica se existem repetidos
-  for (let index of numbers) {
-    for (let check of numbers) {
-      if (index === check) {
-        comparador = comparador +1
-      }
-    }
-    if (comparador >= 3) {
-      return "não é possível gerar um número de telefone com esses valores"
-    }
-    comparador = 0
-  }
-  for (let index of numbers) {
-    if(numbers[index] > 9 || numbers[index] < 0){
-      return "não é possível gerar um número de telefone com esses valores"
-    }
-  }
-  let telefone = ''
-      for(let index = 0; index < numbers.length; index +=1){
-        if(index == 0){
-          telefone ="(" + numbers[index]
-        } else if (index == 1){
-          telefone = telefone + numbers[index] + ") "
-        } else if (index > 1 && index < 6){
-          telefone = telefone + numbers[index]
-        }else if(index == 7){
-          telefone = telefone + "-" + numbers[index]
-        }else{
-          telefone = telefone + numbers[index]
-        }
-      } return telefone
-  }
+  // verifica se existem repetidos;
+  if (checkNumber(numbers)) return 'não é possível gerar um número de telefone com esses valores';
+  invalidPhoneNumber(numbers);
+  const telefone = createPhoneNumber(numbers);
+  return telefone;
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 

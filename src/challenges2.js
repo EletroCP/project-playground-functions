@@ -19,7 +19,7 @@ function techList(tech, name) {
   }
   return array;
 }
-/* 
+
 // Desafio 11
 const checkNumber = (number) => {
   const checkRepeted = number.reduce((accumulator, value) => (
@@ -76,7 +76,7 @@ function generatePhoneNumber(numbers) {
   const telefone = createPhoneNumber(numbers);
   return telefone;
 }
-// Desafio 12
+/*  // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
   if(lineA < (lineB + lineC) && Math.abs(lineC - lineB) < lineA){

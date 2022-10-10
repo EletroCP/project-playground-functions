@@ -1,27 +1,25 @@
-/* // Desafio 10
+// Desafio 10
 function techList(tech, name) {
-  let sortArray = []
-  let array = []
-  let list = {}
-
-  if(tech.length == 0){
-    return "Vazio!"
-
-   } else {
-     for(index = 0; index < tech.length; index +=1){
-       sortArray.push(tech[index])
-     }
-       sortArray.sort()
-      for(let add in sortArray){
-        list.tech = sortArray[add]
-        list.name = name
-        array.push(list)
-        list = {}
-
-      }
-     }return array
-   }
-// Desafio 11
+  let sortArray = [];
+  let array = [];
+  let list = {};
+  if (tech.length === 0) {
+    return 'Vazio!';
+  }
+  for (let index = 0; index < tech.length; index += 1) {
+    sortArray.push(tech[index]);
+  }
+  sortArray.sort();
+  // eslint-disable-next-line guard-for-in
+  for (let add in sortArray) {
+    list.tech = sortArray[add];
+    list.name = name;
+    array.push(list);
+    list = {};
+  }
+  return array;
+}
+/* // Desafio 11
 function generatePhoneNumber(numbers) {
   if(numbers.length !== 11){
     return "Array com tamanho incorreto."
